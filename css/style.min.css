@@ -1287,6 +1287,10 @@ p {
   font-size: 1.2em !important;
 }
 
+.header .navigation__cta i {
+  margin-right: 10px;
+}
+
 @media (max-width: 768px) {
   .header .navigation {
     background: #E7F4EB;
