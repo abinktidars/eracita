@@ -24,11 +24,13 @@ p{
 
 .page{
   position: relative;
-  // padding-top: 50px;
-  // min-height: 100vh;
   padding: 30px;
   @include max-responsive($sm){
     padding: 10px;
+  }
+
+  &__inner{
+    padding: 40px 0px;
   }
 
   &__title{
@@ -158,14 +160,12 @@ p{
   }
   
   &__top{
-    // z-index: -1;
     bottom: 0;
     left: 0;
   }
 
   &__bottom{
     top: 0;
-    // position: relative;
   }
 }
 
@@ -182,8 +182,27 @@ p{
 
   @include max-responsive($sm){
     height: 80px;
-    padding: 20px;
-    display: block;
+  }
+
+  @include min-responsive($sm){
+    // background: $white;
+  }
+
+  nav{
+    display: flex;
+    align-items: center;
+
+    .logo{
+      @include min-responsive($sm){
+        flex: 1 30%;
+      }
+      @include max-responsive($sm){
+        width: 80%;
+      }
+    }
+    .navigation{
+      flex: 1 70%;
+    }
   }
   
   &.fixed{
@@ -196,15 +215,23 @@ p{
 
     .navigation ul li a{
       color: $mainblack;
-
+      
       &:hover{
         color: $green;
       }
-    }
+    }    
   }
-
-  .navigation{
-    text-align: right;
+  
+  .navigation{    
+    &__cta{
+      img{
+        width: 24px;
+      }
+      a{
+        color: $white !important;
+        font-size: 1.2em !important;
+      }
+    }
 
     @include max-responsive($sm){
       background: $lightgreen;
@@ -220,16 +247,42 @@ p{
     }
 
     ul{
+      @include min-responsive($sm){
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
       @include max-responsive($sm){
         margin-top: 100px;
       }
 
       li{
         margin: 5px 15px;
+        position: relative;
         @include max-responsive($sm){
           display: block;
           margin: 50px 10px;
           text-align: center;
+        }
+        &.active{
+          a{
+            color: $green;
+          }
+          @include min-responsive($sm){
+            &:before{
+              height: 2px;
+              width: 30px;
+              border-radius: 6px;
+              background: green;
+              position: absolute;
+              content: '';
+              bottom: -10px;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+          }
         }
         a{
           color: $mainblack;
@@ -248,11 +301,6 @@ p{
       transform: translateX(0%);
     }
 
-    &__contact{
-      a{
-        color: $white !important;
-      }
-    }
   }
 
   .valign{
@@ -266,9 +314,15 @@ p{
 
   .menu__mobile {
     position: absolute;
-    top: 10px;
+    top: 7px;
     right: 0px;
     z-index: 99;
+  }
+
+  .container{
+    @include max-responsive($sm){
+      flex: 1;
+    }
   }
 }
 
@@ -513,10 +567,9 @@ p{
 // 3.0 ABOUT
 .about{
   background: $white;
-  padding-top: 100px;
   
-  @include max-responsive($sm){
-    padding-top: 0px;
+  @include min-responsive($sm){
+    padding-top: 100px;
   }
   
   .page__title{
@@ -1052,17 +1105,6 @@ p{
   @include min-responsive($xlg){
     min-height: 60vh;
   }
-  
-  // &::before{
-  //   content: url(../images/footer-left.png);
-  //   position: absolute;
-  //   bottom: -30%;
-  //   left: 0;
-
-  //   @include min-responsive($xlg){
-  //     bottom: -20%;
-  //   }
-  // }
 
   &__content{
     padding: 50px 10px;
@@ -1075,7 +1117,7 @@ p{
     }
 
     .logo{
-      width: 150px;
+      width: 290px;
       height: 50px;
     }
   }
@@ -1126,5 +1168,20 @@ p{
       color: $green;
       font-weight: bold;
     }
+  }
+}
+
+// BANNER
+.banner{
+  width: 100%;
+  padding-top: 100px;
+  height: 400px;
+  overflow: hidden;
+  @include max-responsive($sm){
+    height: 300px;
+    padding-top: 80px;
+  }
+  img{
+    width: 100%;
   }
 }
