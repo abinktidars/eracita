@@ -35,7 +35,7 @@ $(document).ready(function(){
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     centerMode: false,
                     
                 }
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
     //Back To Top
     $(window).scroll(function(){		
-        if ($(this).scrollTop() >= 50){
+        if ($(this).scrollTop() >= 30){
             $('.backtop').fadeIn(300);
             $('.header').addClass("fixed");
         } else{
