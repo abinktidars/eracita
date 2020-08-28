@@ -455,6 +455,12 @@ a {
   cursor: pointer;
   white-space: nowrap;
   transition: all .3s ease-in-out;
+  
+  @include max-responsive($sm) {
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 6px;
+  }
 
   &:hover {
     background: $lightgreen;
@@ -473,6 +479,7 @@ a {
 
     @include max-responsive($sm) {
       overflow-x: scroll;
+      display: block;
     }
   }
 

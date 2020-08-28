@@ -1093,6 +1093,14 @@ a {
   transition: all .3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .tab {
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 6px;
+  }
+}
+
 .tab:hover {
   background: #E7F4EB;
   border: 1px solid #148D3B;
@@ -1112,6 +1120,7 @@ a {
 @media (max-width: 768px) {
   .tab-wrapper {
     overflow-x: scroll;
+    display: block;
   }
 }
 
@@ -1467,6 +1476,8 @@ p {
 .header .navigation__cta a {
   color: #ffffff !important;
   font-size: 1.2em !important;
+  display: flex;
+  align-items: center;
 }
 
 .header .navigation__cta i {
@@ -1621,7 +1632,7 @@ p {
   .cover .content .tagline {
     text-align: center;
     margin-top: 30px;
-    padding: 20px;
+    padding: 10px;
   }
 }
 
