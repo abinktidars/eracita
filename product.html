@@ -62,9 +62,7 @@
   </div>
 
   <!-- Banner Page -->
-  <div class="banner">
-    <img src="images/banner-5.jpg" alt="">
-  </div>
+  <div class="banner banner__product"></div>
 
   <!-- Product-->
   <section class="product">
@@ -74,85 +72,46 @@
       </div>
       <!--Tab-->
       <div class="tab-wrapper">
-        <div class="tab active">All</div>
-        <div class="tab">Antiseptic & Disinfectant</div>
-        <div class="tab">Wound Dressing</div>
-        <div class="tab">Laundry Hygiene</div>
-        <div class="tab">Automatic Dishwashing Cleaner </div>
-        <div class="tab">Central Steril Supply Departement</div>
+        <button class="tab active" data-filter="*">All</button>
+        <button class="tab" data-filter=".item1">Antiseptic & Disinfectant</button>
+        <button class="tab" data-filter=".item2">Wound Dressing</button>
+        <button class="tab" data-filter=".item3">Laundry Hygiene</button>
+        <button class="tab" data-filter=".item4">Automatic Dishwashing Cleaner </button>
+        <button class="tab" data-filter=".item5">Central Steril Supply Departement</button>
       </div>
       <div class="tab-content">
-        <a href="product-detail.html" class="tab-content__item">
+        <!--Wound Dressing-->
+        <a href="product-detail.html" class="tab-content__item item2" data-category="item2">
           <div class="card">
             <div class="card__image">
-              <img src="images/product-1.png" alt="">
+              <img src="images/product-2.png" alt="">
             </div>
             <div class="card__name">
-              <div class="card__name--title">Alcohol Swab</div>
-              <div class="card__name--desc">Tissue lembut Non-Woven, 4 ply</div>
+              <div class="card__name--title">Alginate Base</div>
+              <div class="card__name--desc">Penutup luka untuk penyembuhan luka bakar, kronis infeksi & luka akut kotor</div>
             </div>
             <div class="card__foot">
-              <div class="label label--danger">Antiseptic & Disinfectant</div>
+              <div class="label label--default">Wound Dressing</div>
             </div>
           </div>
         </a>
-        <a href="product-detail.html" class="tab-content__item">
+        <a href="product-detail.html" class="tab-content__item item2" data-category="item2">
           <div class="card">
             <div class="card__image">
-              <img src="images/product-4.png" alt="">
+              <img src="images/product-2.png" alt="">
             </div>
             <div class="card__name">
-              <div class="card__name--title">Hand Rub</div>
-              <div class="card__name--desc">Cairan antiseptik berbau khas alkohol</div>
+              <div class="card__name--title">Antiseptic wound dressing</div>
+              <div class="card__name--desc">Penutup luka untuk penyembuhan luka bakar, kronis infeksi & luka akut kotor</div>
             </div>
             <div class="card__foot">
-              <div class="label label--danger">Antiseptic & Disinfectant</div>
+              <div class="label label--default">Wound Dressing</div>
             </div>
           </div>
         </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-3.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Hand Scrub</div>
-              <div class="card__name--desc">Sabun antiseptik, tekstur kental berbau khas</div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--danger">Antiseptic & Disinfectant</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-5.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Hand Sanitizer</div>
-              <div class="card__name--desc">Cairan antiseptik berbau khas alkohol</div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--danger">Antiseptic & Disinfectant</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-6.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Antiseptic Hand Soap</div>
-              <div class="card__name--desc">Sabun berbentuk cairan kental, aroma khas</div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--danger">Antiseptic & Disinfectant</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
+
+        <!--CSSD-->
+        <a href="product-detail.html" class="tab-content__item item5" data-category="item5">
           <div class="card">
             <div class="card__image">
               <img src="images/product-8.png" alt="">
@@ -166,7 +125,7 @@
             </div>
           </div>
         </a>
-        <a href="product-detail.html" class="tab-content__item">
+        <a href="product-detail.html" class="tab-content__item item5" data-category="item5">
           <div class="card">
             <div class="card__image">
               <img src="images/product-7.png" alt="">
@@ -182,67 +141,9 @@
             </div>
           </div>
         </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-2.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Alginate Base</div>
-              <div class="card__name--desc">Penutup luka untuk penyembuhan luka bakar, kronis infeksi & luka akut kotor</div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--default">Wound Dressing</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-2.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Antiseptic wound dressing</div>
-              <div class="card__name--desc">Penutup luka untuk penyembuhan luka bakar, kronis infeksi & luka akut kotor</div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--default">Wound Dressing</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-2.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Dishwashing Detergent</div>
-              <div class="card__name--desc">
-                Detergent cair konsentrat untuk membersihkan lemak, noda dan partikel makanan                
-              </div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--info">Automatic Dishwashing Cleaner</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
-          <div class="card">
-            <div class="card__image">
-              <img src="images/product-7.png" alt="">
-            </div>
-            <div class="card__name">
-              <div class="card__name--title">Rinse Aid</div>
-              <div class="card__name--desc">
-                Cairan pembilas setelah proses pencucian untuk hasil bersinar dan mengkilap.                 
-              </div>
-            </div>
-            <div class="card__foot">
-              <div class="label label--info">Automatic Dishwashing Cleaner</div>
-            </div>
-          </div>
-        </a>
-        <a href="product-detail.html" class="tab-content__item">
+        
+        <!-- Laundry Hygiene-->
+        <a href="product-detail.html" class="tab-content__item item3" data-category="item3">
           <div class="card">
             <div class="card__image">
               <img src="images/product-11.png" alt="">
@@ -260,7 +161,7 @@
             </div>
           </div>
         </a>
-        <a href="product-detail.html" class="tab-content__item">
+        <a href="product-detail.html" class="tab-content__item item3" data-category="item3">
           <div class="card">
             <div class="card__image">
               <img src="images/product-12.png" alt="">
@@ -278,6 +179,113 @@
             </div>
           </div>
         </a>
+        
+        <!--Automatic Diswashing-->
+        <a href="product-detail.html" class="tab-content__item item4" data-category="item4">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-2.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Dishwashing Detergent</div>
+              <div class="card__name--desc">
+                Detergent cair konsentrat untuk membersihkan lemak, noda dan partikel makanan                
+              </div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--info">Automatic Dishwashing Cleaner</div>
+            </div>
+          </div>
+        </a>
+        <a href="product-detail.html" class="tab-content__item item4" data-category="item4">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-7.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Rinse Aid</div>
+              <div class="card__name--desc">
+                Cairan pembilas setelah proses pencucian untuk hasil bersinar dan mengkilap.                 
+              </div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--info">Automatic Dishwashing Cleaner</div>
+            </div>
+          </div>
+        </a>
+
+        <!--Antiseptic Disinfectan-->
+        <a href="product-detail.html" class="tab-content__item item1" data-category="item1">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-1.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Alcohol Swab</div>
+              <div class="card__name--desc">Tissue lembut Non-Woven, 4 ply</div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--danger">Antiseptic & Disinfectant</div>
+            </div>
+          </div>
+        </a>
+        <a href="product-detail.html" class="tab-content__item item1" data-category="item1">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-4.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Hand Rub</div>
+              <div class="card__name--desc">Cairan antiseptik berbau khas alkohol</div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--danger">Antiseptic & Disinfectant</div>
+            </div>
+          </div>
+        </a>
+        <a href="product-detail.html" class="tab-content__item item1" data-category="item1">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-3.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Hand Scrub</div>
+              <div class="card__name--desc">Sabun antiseptik, tekstur kental berbau khas</div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--danger">Antiseptic & Disinfectant</div>
+            </div>
+          </div>
+        </a>
+        <a href="product-detail.html" class="tab-content__item item1" data-category="item1">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-5.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Hand Sanitizer</div>
+              <div class="card__name--desc">Cairan antiseptik berbau khas alkohol</div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--danger">Antiseptic & Disinfectant</div>
+            </div>
+          </div>
+        </a>
+        <a href="product-detail.html" class="tab-content__item item1" data-category="item1">
+          <div class="card">
+            <div class="card__image">
+              <img src="images/product-6.png" alt="">
+            </div>
+            <div class="card__name">
+              <div class="card__name--title">Antiseptic Hand Soap</div>
+              <div class="card__name--desc">Sabun berbentuk cairan kental, aroma khas</div>
+            </div>
+            <div class="card__foot">
+              <div class="label label--danger">Antiseptic & Disinfectant</div>
+            </div>
+          </div>
+        </a>
+       
       </div>
     </div>
   </section>
@@ -285,7 +293,6 @@
   <!-- Product-->
   <section class="page case-study page__inner" id="product">
     <div class="container">
-      <!-- Title -->
       <div class="page__title text-center">
         <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
           Recomendation Products
@@ -293,7 +300,6 @@
         <div class="shadowTitle shadowTitle__3 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
           products
         </div>
-
       </div>
       <div class="project wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.2s">
         <div class="project__item">
@@ -435,6 +441,28 @@
   <script src="js/wow.min.js" type="text/javascript"></script>
   <script src="js/isotope.pkgd.min.js" type="text/javascript"></script>
   <script src="js/main.js" type="text/javascript"></script>
+
+  <!-- Isotope Filter-->
+  <script>    
+    var $grid = $('.tab-content').isotope({
+      itemSelector: '.tab-content__item',
+      layoutMode: 'fitRows'
+    });
+
+    
+    // Function Click Filter
+    $('.tab').on("click", function(){
+
+      // Active Tab
+      $('.tab').removeClass('active');
+      $(this).addClass('active');
+
+      var value = $(this).attr('data-filter');
+      $grid.isotope({
+        filter: value
+      })
+    })
+  </script>
 
 </body>
 

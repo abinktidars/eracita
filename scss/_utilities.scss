@@ -480,6 +480,7 @@ a {
     @include max-responsive($sm) {
       overflow-x: scroll;
       display: block;
+      text-align: center;
     }
   }
 

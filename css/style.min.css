@@ -1121,6 +1121,7 @@ a {
   .tab-wrapper {
     overflow-x: scroll;
     display: block;
+    text-align: center;
   }
 }
 
@@ -1275,7 +1276,7 @@ p {
 
 @media (max-width: 768px) {
   .page__title h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 
@@ -2456,14 +2457,43 @@ p {
 .banner {
   width: 100%;
   padding-top: 100px;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.banner__about {
+  background: url(../images/banner-1.jpg) no-repeat center;
+}
+
+.banner__product {
+  background: url(../images/banner-5.jpg) no-repeat center;
+}
+
+.banner__services {
+  background: url(../images/banner-4.jpg) no-repeat center;
+}
+
+.banner__contact {
+  background: url(../images/banner-2.jpg) no-repeat center;
+  background-position: bottom;
 }
 
 @media (max-width: 768px) {
   .banner {
     height: 300px;
     padding-top: 80px;
+    background-attachment: scroll;
+    background-size: contain;
+    background-position: bottom;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 
