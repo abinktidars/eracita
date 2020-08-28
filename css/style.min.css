@@ -766,7 +766,8 @@ img {
 3.0 Component
 4.0 Margin
 --------------------------------------------------------------*/
-.clearfix:after, .clearfix:before,
+.clearfix:after,
+.clearfix:before,
 .row:after,
 .row:before {
   display: table;
@@ -817,6 +818,20 @@ img {
 
 .container__full {
   height: 100%;
+}
+
+.round-1 {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.round-2 {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
 }
 
 .btn {
@@ -984,7 +999,6 @@ a {
   width: 60px;
   height: 45px;
   position: relative;
-  margin: 10px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
@@ -1031,6 +1045,168 @@ a {
 #nav-icon1.open span:nth-child(3) {
   top: 18px;
   transform: rotate(-135deg);
+}
+
+.title-main {
+  position: relative;
+}
+
+.title-main h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  .title-main h1 {
+    font-size: 2em;
+  }
+}
+
+.title-main:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 3px;
+  width: 70px;
+  background: #148D3B;
+}
+
+@media (max-width: 768px) {
+  .title-main:after {
+    bottom: -10px;
+  }
+}
+
+.tab {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  margin-right: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .3s ease-in-out;
+}
+
+.tab:hover {
+  background: #E7F4EB;
+  border: 1px solid #148D3B;
+}
+
+.tab.active {
+  background: #148D3B;
+  color: #ffffff;
+  border: 1px solid #148D3B;
+}
+
+.tab-wrapper {
+  display: flex;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  .tab-wrapper {
+    overflow-x: scroll;
+  }
+}
+
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .tab-content {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+
+.tab-content__item {
+  width: calc(100%/4);
+  padding: 8px;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .tab-content__item {
+    padding: 4px;
+    width: calc(100%/1);
+  }
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0 0 24px -4px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__name {
+  padding: 10px;
+  flex: 1 0 auto;
+}
+
+.card__name--title {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.card__name--desc {
+  line-height: normal;
+  color: #848484;
+  flex: 1 0 auto;
+}
+
+.card__foot {
+  padding: 10px;
+}
+
+.label {
+  height: 16px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 0;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 16px;
+  background-color: #f1f1f1;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.label--info {
+  background-color: #0eb3ff;
+}
+
+.label--success {
+  background-color: #9bce59;
+}
+
+.label--warning {
+  background-color: #f8a33f;
+}
+
+.label--danger {
+  background-color: #f25b61;
+}
+
+.label--default {
+  background-color: #54bfba;
 }
 
 /*--------------------------------------------------------------
@@ -1232,6 +1408,11 @@ p {
   z-index: 100;
   transition: box-shadow .3s, color .5s, background-color .5s;
   position: fixed;
+  background-color: #ffffff;
+}
+
+.header--transparent {
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
@@ -1243,6 +1424,7 @@ p {
 .header nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
@@ -1303,6 +1485,9 @@ p {
     z-index: 2;
     transform: translateX(100%);
     transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1311,12 +1496,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-  }
-}
-
-@media (max-width: 768px) {
-  .header .navigation ul {
-    margin-top: 100px;
   }
 }
 
@@ -1383,9 +1562,6 @@ p {
 }
 
 .header .menu__mobile {
-  position: absolute;
-  top: 7px;
-  right: 0px;
   z-index: 99;
 }
 
@@ -1653,19 +1829,20 @@ p {
   }
 }
 
-.about .page__title:after {
+.about .page__title h1:after {
   content: '';
   position: absolute;
   top: 25px;
-  right: 80px;
+  left: calc(100% - 40%);
   height: 3px;
-  width: 110px;
+  width: 70px;
   background: #148D3B;
 }
 
 @media (max-width: 768px) {
-  .about .page__title:after {
-    top: 115px;
+  .about .page__title h1:after {
+    top: auto;
+    bottom: -10px;
     left: 0;
     right: 0;
     margin: auto;
@@ -1673,7 +1850,24 @@ p {
   }
 }
 
-.case-study .page__title:after {
+.about .visi-misi .page__title {
+  margin: 0px auto 10px;
+}
+
+.about .visi-misi .page__title:after {
+  left: calc(100% - 40%);
+  width: 60px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about .visi-misi .page__title:after {
+    top: auto;
+    bottom: -5px;
+  }
+}
+
+.case-study .page__title h1:after {
   content: '';
   position: absolute;
   top: 55px;
@@ -1686,9 +1880,10 @@ p {
 }
 
 @media (max-width: 768px) {
-  .case-study .page__title:after {
-    top: 38px;
+  .case-study .page__title h1:after {
+    top: auto;
     width: 70px;
+    bottom: -10px;
   }
 }
 
@@ -1753,7 +1948,7 @@ p {
 
 @media (max-width: 768px) {
   .case-study .project .slick-next {
-    right: 40%;
+    right: 37%;
     top: 91%;
   }
 }
@@ -1764,10 +1959,16 @@ p {
 
 @media (max-width: 768px) {
   .case-study .project .slick-prev {
-    left: 35%;
+    left: 32%;
     z-index: 20;
     top: 91%;
   }
+}
+
+.case-study .project .slick-prev, .case-study .project .slick-next {
+  width: 37px;
+  height: 37px;
+  z-index: 2;
 }
 
 .testimonials .page__title {
@@ -2168,6 +2369,10 @@ p {
   padding: 10px;
   background-clip: padding-box;
   margin: 10px auto;
+}
+
+.contact .maps {
+  margin: 20px auto;
 }
 
 .footer {

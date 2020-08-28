@@ -27,49 +27,11 @@ $(document).ready(function(){
                 }
             },
             {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: false,
-                    
-                }
-            },
-        ]
-    })
-
-    // Stories Slider
-    $(".stories").slick({
-        centerMode: false,
-        slidesToShow: 2.3,
-        arrows: true,
-        dots: false,
-        infinite : false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    centerMode: false
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 3,
-                    centerMode: false
-                }
-            },
-            {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    centerMode: false
+                    centerMode: false,
+                    
                 }
             },
         ]
@@ -80,7 +42,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         dots: true,
         arrows: false,
-        autoplay: true
+        autoplay: true        
     }) 
 
     // Wow Js
@@ -88,7 +50,7 @@ $(document).ready(function(){
 
     //Back To Top
     $(window).scroll(function(){		
-        if ($(this).scrollTop() >= 30){
+        if ($(this).scrollTop() >= 100){
             $('.backtop').fadeIn(300);
             $('.header').addClass("fixed");
         } else{

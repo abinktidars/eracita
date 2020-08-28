@@ -179,6 +179,11 @@ p{
   z-index: 100;
   transition: box-shadow .3s, color .5s, background-color .5s;
   position: fixed;
+  background-color: $white;
+  
+  &--transparent{
+    background-color: transparent;
+  }
 
   @include max-responsive($sm){
     height: 80px;
@@ -191,6 +196,7 @@ p{
   nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     .logo{
       @include min-responsive($sm){
@@ -247,6 +253,9 @@ p{
       z-index: 2;
       transform: translateX(100%);
       transition: all .3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     ul{
@@ -254,10 +263,6 @@ p{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-      }
-
-      @include max-responsive($sm){
-        margin-top: 100px;
       }
 
       li{
@@ -316,9 +321,6 @@ p{
   }
 
   .menu__mobile {
-    position: absolute;
-    top: 7px;
-    right: 0px;
     z-index: 99;
   }
 
@@ -576,21 +578,41 @@ p{
   }
   
   .page__title{
-    
-    &:after{
-      content: '';
-      position: absolute;
-      top: 25px;
-      right: 80px;
-      height: 3px;
-      width: 110px;
-      background: $green;
-      @include max-responsive($sm){
-        top: 115px;
-        left: 0;
-        right: 0;
-        margin: auto;
+
+    h1{ 
+      &:after{
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: calc(100% - 40%);
+        height: 3px;
+        width: 70px;
+        background: $green;
+        @include max-responsive($sm){
+          top: auto;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 60px;
+        }
+      }
+    }
+  }
+
+  .visi-misi{
+
+    .page__title{
+      margin: 0px auto 10px;
+      
+      &:after{
+        left: calc(100% - 40%);
         width: 60px;
+        border-radius: 10px;
+        @include max-responsive($sm){
+          top: auto;
+          bottom: -5px;
+        }
       }
     }
   }
@@ -598,11 +620,11 @@ p{
 
 // 4.0 CASE STUDY
 .case-study{
-  // background: $lightgreen;
 
   .page__title{
 
-    &:after{
+    h1{      
+      &:after{
       content: '';
       position: absolute;
       top: 55px;
@@ -612,12 +634,14 @@ p{
       height: 3px;
       width: 110px;
       background: $green;
-
+      
       @include max-responsive($sm){
-        top: 38px;
+        top: auto;
         width: 70px;
+        bottom: -10px;
       }
     }
+  }
   }
 
   .project{
@@ -626,7 +650,6 @@ p{
     &__item{
       width: calc(100% + 30px);
       transform: scale(0.8);
-      // transform .6s cubic-bezier(.3,.1,.05,1),opacity .4s cubic-bezier(.3,.1,.05,1);
       @include transition(0.5s);
       
       &:focus{
@@ -634,7 +657,6 @@ p{
       }
       
       &:hover{
-        // transform: scale(1);
         cursor: -webkit-grab;
         cursor: grab;
       }
@@ -681,7 +703,7 @@ p{
       right: -4%;
 
       @include max-responsive($sm){
-        right: 40%;
+        right: 37%;
         top: 91%;
       }
     }
@@ -690,10 +712,16 @@ p{
       left: -4%;
 
       @include max-responsive($sm){
-        left: 35%;
+        left: 32%;
         z-index: 20;
         top: 91%;
       }
+    }
+
+    .slick-prev, .slick-next{
+      width: 37px;
+      height: 37px;
+      z-index: 2;
     }
   }
 }
@@ -1096,6 +1124,10 @@ p{
       }
     }
 
+  }
+
+  .maps{
+    margin: 20px auto;
   }
 }
 
