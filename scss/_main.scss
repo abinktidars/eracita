@@ -913,145 +913,84 @@ p{
   }
 }
 
-// 6.0 STORIES
-.story{
-  // background: $lightgreen;
-  padding: 0;
-  min-height: 100vh;
+// 6.0 PRODUCT
+.detail{
+  padding: 15px 20px;
+}
+.product-info {
+  display: flex;
+  order: 1;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+  padding: 15px;
+  color: #ffffff;
+  background: linear-gradient(79.87deg, #148D3B 0.77%, #5AE487 97.33%);
 
-  @include min-responsive($xlg){
-    min-height: 90vh;
+  @include max-responsive($sm){
+    margin: 20px -20px;
   }
 
-  .page__title{
-
-    &:after{
-      content: '';
-      position: absolute;
-      top: 25px;
-      left: 150px;
-      height: 3px;
-      width: 80px;
-      background: $green;
-
-      @include max-responsive($sm){
-        top: 38px;
-        width: 70px;
-        left: 0;
-        right: 0;
-        margin: auto;
-      }
-    }
+  .title{
+    font-size: 1.8em;
+    margin-bottom: 15px;
   }
 
-  .stories{
-    position: relative;
-    
-    &__item{
-      // width: 250px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: white;
-      margin: 10px;
-      box-shadow: 0px 6px 10px 0px rgba(90,90,90,0.2);
-
-      @include max-responsive($sm){
-        // width: 200px !important;
-      }
-    }
-
-    &__images{
-      height: 160px;
-      overflow: hidden;
-    }
-
-    &__content{
-      padding: 20px;
-
-      .label{
-        color: white;
-        padding: 5px 20px;
-        border-radius: 20px;
-        display: inline-block;
-        font-size: 13px;
-        box-shadow: 0px 4px 10px #cccccc;
-
-        &__green{
-          background: $green;
-        }
-
-        &__yellow{
-          background: $yellow;
-        }
-      }
-      
-      .title {
-        font-size: 1.5em;
-        margin: 15px auto;
-        font-weight: bold;
-      }
-      
-      .author {
-        margin: 20px auto 5px;
-        
-        &__img {
-          width: 30px;
-          float: left;
-          margin: -5px 15px auto 0px;
-          border-radius: 50%;
-          overflow: hidden;
-          box-shadow: 0px 4px 10px #cccccc;
-        }
-      }
-    }
-
-    .slick-prev, .slick-next{
-      z-index: 2;
-    }
-
-    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before{
-      opacity: 0;
-    }
-
-    .slick-prev:before, .slick-next:before{
-      color: $blue;
-      font-size: 40px;
-    }
-
-    .slick-dots{
-      bottom: -60px;
-      
-      li button:before{
-        font-size: 13px;
-        color: $blue;
-      }
-    }
-  }
-
-  .slick-list {
-    // padding-left: 0px!important; 
-  }
-
-  .slick-next{
-    @include max-responsive($sm){
-      right: 20px;
-    }
-  }
-
-  .slick-prev{
-    @include max-responsive($sm){
-      left: 0;
-    }
-  }
-
-  .wave__top{
+  .icon{
     position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
 
-    @include max-responsive($sm){
-      position: relative;
-    }
+.product-image{
+  display: flex;
+  order: 1;
+  margin-bottom: 15px;
+}
+
+.product-content{
+  display: flex;
+  order: 1;
+  flex-direction: column;
+  position: relative;
+  margin: 10px auto;
+
+  .title{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: $mainblack;
+    margin-bottom: 10px;
   }
 
+  .description{
+    color: #8D8C8C;
+    line-height: normal;
+  }
+
+}
+
+.product-recommend{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px -10px;
+
+  @include max-responsive($sm){
+    overflow-x: scroll;
+  }
+  
+  
+  &__item{
+    flex-basis: 25%;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+  }
+
+  .card{
+    margin: 10px;
+  }
 }
 
 // 7.0 CONTACT
@@ -1229,6 +1168,15 @@ p{
   &__contact{
     background: url(../images/banner-2.jpg) no-repeat center;
     background-position: bottom;
+  }
+  &__detail{
+    background-image: linear-gradient(to top left, rgba(200,173,2,0.7), rgba(32,155,72,1)), url("../images/banner-5.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-direction: column;
+    text-align: center;
   }
   @include max-responsive($sm){
     height: 300px;
